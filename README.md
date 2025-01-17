@@ -9,6 +9,39 @@ PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent rei
 - [**EMC**: Episodic Multi-agent Reinforcement Learning with Curiosity-driven Exploration](https://arxiv.org/abs/2111.11032)
 - [**CDS**: Celebrating Diversity in Shared Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2106.02195)
 
+## New Simple Installation instructions
+
+Installation from 'EMU_release_pymarl':
+
+```shell
+conda create -n emu python=3.8 -y
+conda activate emu
+
+bash install_dependecies.sh
+```
+
+Manually install SMAC
+
+```shell
+pip install -e ../EMU_smac_env/
+```
+
+If required:
+
+```shell
+pip install protobuf==3.19.6
+```
+
+Set up StarCraft II and SMAC:
+```shell
+bash install_sc2.sh
+bash install_gfootball.sh
+```
+
+If SC2PATH is not recognized, modify the line 169 in "/home/diego-randolp/anaconda3/envs/emu/lib/python3.7/site-packages/pysc2/run_configs/platforms.py" to "base_dir = /home/diego-randolp/Code/DeepLearning/EMU/EMU_release_pymarl/3rdparty/StarCraftII"
+
+This will download SC2 into the 3rdparty folder and copy the maps necessary to run over.
+
 # Run an experiment
 
 **Note: Please use the updated configuration file for experiments. We have corrected some errors in the previously uploaded configurations.**

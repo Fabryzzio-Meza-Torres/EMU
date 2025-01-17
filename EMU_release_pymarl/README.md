@@ -14,14 +14,27 @@ PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent rei
 
 PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment.
 
-## New Installation instructions
+## New Simple Installation instructions
 
-Build the Dockerfile using 
+Installation from 'EMU_release_pymarl':
+
 ```shell
-conda create -n pymarl python=3.8 -y
-conda activate pymarl
+conda create -n emu python=3.8 -y
+conda activate emu
 
 bash install_dependecies.sh
+```
+
+Manually install SMAC
+
+```shell
+pip install -e ../EMU_smac_env/
+```
+
+If required:
+
+```shell
+pip install protobuf==3.19.6
 ```
 
 Set up StarCraft II and SMAC:
@@ -30,9 +43,10 @@ bash install_sc2.sh
 bash install_gfootball.sh
 ```
 
+If SC2PATH is not recognized, modify the line 169 in "/home/diego-randolp/anaconda3/envs/emu/lib/python3.7/site-packages/pysc2/run_configs/platforms.py" to "base_dir = /home/diego-randolp/Code/DeepLearning/EMU/EMU_release_pymarl/3rdparty/StarCraftII"
+
 This will download SC2 into the 3rdparty folder and copy the maps necessary to run over.
 
-The requirements.txt file can be used to install the necessary packages into a virtual environment (not recomended).
 
 ## Run an experiment 
 

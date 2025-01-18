@@ -31,11 +31,6 @@ Manually install SMAC
 pip install -e ../EMU_smac_env/
 ```
 
-If required:
-
-```shell
-pip install protobuf==3.19.6
-```
 
 Set up StarCraft II and SMAC:
 ```shell

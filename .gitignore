@@ -2,3 +2,27 @@ EMU_release_pymarl/3rdparty/
 EMU_release_pymarl/__MACOSX/
 EMU_release_pymarl/results/
 EMU_smac_env/
+EMU_release_pymarl/emu_env
+
+# Ignorar entornos virtuales
+venv/
+.env/
+
+# Ignorar dependencias instaladas
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Ignorar archivos temporales
+*.swp
+*.tmp
+*.log
+.DS_Store
+
+# Ignorar configuración del editor
+.vscode/
+.idea/
